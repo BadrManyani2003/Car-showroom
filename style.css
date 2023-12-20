@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,100;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background-color: transparent;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color: #222;
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0;
+    transition: 3s;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+.navbar a:hover,.navbar a.active{
+    font-size: 18px;
+    color: #1743e3;
+    font-weight: 600;
+    
+}
+.social-media{
+    width: 150px;
+    height: 40px;
+}
+.social-media a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid transparent;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+.social-media a:hover{
+    border: 2px solid #eaeaea;
+}
+.social-media a i{
+    font-size: 24px;
+    color: #eaeaea;
+    transform: rotate(-45deg);
+    border-radius: 6px;
+    transition: 3s;
+    animation: Zome 1s;
+    animation-delay: calc(.2s*var(--i));
+}
+.home{
+    width: 100%;
+    height: 100vh;
+    padding: 50px 8% 0;
+    overflow: hidden;
+}
+.home-content{
+    max-width: 630px;
+}
+.home-content h1{
+    font-size: 50px;
+    line-height: 1.2;
+    position: relative;
+}
+.home-content h3{
+    font-size: 40px;
+    color: #1743e3;
+    position: relative;
+}
+.home-content p{
+    font-size: 16px;
+    margin: 15px 0 30px;
+    max-width: 500px;
+}
+.home-content .btn{
+    display: inline-block;
+    padding: 10px 28px ;
+    background: #1743e3;
+    border: 2px solid #1743e3;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0,0,0,.1);
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.home-content .btn:hover{
+    background: #eaeaea;
+    border: 2px solid #1743e3;
+    color: #1743e3;
+}
+.home-img{
+    position: relative;
+    right: -7%;
+    width: 390px;
+    height: 390px;
+    transform: rotate(45deg);
+   
+}
+.home-img .rhomebus{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #eaeaea;
+    border:25px solid #1743e3 ;
+    box-shadow: -15px 15px 15px rgb(0,0,0,.2);
+}
+.home-img .rhomebus img{
+    position: absolute;
+    top: 110px;
+    left: -250px;
+    width: 650px;
+    max-width: 750px;
+    transform: rotate(-45deg);
+    transition: 3s;
+    animation: Zome 1s;
+}
+.rhomebus2 {
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 700px;
+    height: 700px;
+    background-color: #1743e3;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+
+.animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eaeaea;
+    animation: show-right 1s ease-out forwards;
+    animation-delay: calc(.3s * var(--i));
+
+}
+@keyframes show-right{
+    100%{
+        width: 0;
+    }
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+        font-size:10px;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+        font-size:25px;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes Zome{
+    0%{
+        scale: 0.4;
+    }
+    90%{
+        scale: 1.05;
+    }
+    100%{
+        scale: 1;
+    }
+}
