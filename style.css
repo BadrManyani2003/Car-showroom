@@ -15,10 +15,6 @@ body{
     overflow: hidden;
 }
 .header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     padding: 30px 8%;
     background-color: transparent;
     z-index: 100;
@@ -47,11 +43,15 @@ body{
 .navbar a:hover,.navbar a.active{
     font-size: 18px;
     color: #1743e3;
+    background: #ffffff;
+    padding:0 5px;
+    border-radius: 8px;
     font-weight: 600;
+    scale: 1.1;
     
 }
 .social-media{
-    width: 150px;
+    width: 140px;
     height: 40px;
 }
 .social-media a{
@@ -81,7 +81,7 @@ body{
 .home{
     width: 100%;
     height: 100vh;
-    padding: 50px 8% 0;
+    padding: 10px 8% 0;
     overflow: hidden;
 }
 .home-content{
@@ -99,7 +99,7 @@ body{
 }
 .home-content p{
     font-size: 16px;
-    margin: 15px 0 30px;
+    margin: 14px 0 30px;
     max-width: 500px;
 }
 .home-content .btn{
@@ -133,7 +133,7 @@ body{
     height: 100%;
     background: #eaeaea;
     border:25px solid #1743e3 ;
-    box-shadow: -15px 15px 15px rgb(0,0,0,.2);
+    box-shadow: -14px 14px 14px rgb(0,0,0,.2);
 }
 .home-img .rhomebus img{
     position: absolute;
@@ -207,5 +207,204 @@ body{
     }
     100%{
         scale: 1;
+    }
+}
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 1280px) {
+    .header {
+        padding: 20px 5%;
+    }
+    .home-img {
+        right: 0;
+        width: 350px;
+        height: 350px;
+    }
+    .home-img .rhomebus img {
+        left: -160px;
+        width: 500px;
+    }
+    
+    .home-content {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 1142px) and (min-width: 850px) {
+    .header {
+        text-align: center;
+    }
+    .navbar {
+        margin-top: 10px;
+    }
+    .navbar a {
+        margin: 10px 0.5rem;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+    .home-content {
+        max-width: 90%;
+    }
+    .home-img {
+        width: 300px;
+        height: 300px;
+    }
+    .home-img .rhomebus img {
+        left: -180px;
+        width: 550px;
+    }
+}
+
+
+@media (max-width: 850px) {
+    
+    .header {
+        padding: 14px 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .navbar {
+        display: flex;
+    }
+    
+    .navbar a {
+        font-size: 14px;
+        margin: 1px 8px;
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .navbar a:hover, .navbar a.active {
+        font-size: 14px;
+        text-decoration: none;
+        color: #1743e3;
+        transition: color 0.3s ease-in-out;
+        background: #ffffff;
+    }
+    
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 10px;
+    }
+    
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 40px 0 0 ;
+    }
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .home-content h1 {
+        font-size: 19px;
+        color: #eaeaea;
+        text-shadow: 0 0 7px #030303;
+
+    }
+    
+    .logo{
+        color: #eaeaeaea;
+        text-shadow: 0 0 7px #030303;
+    }
+    .home-content h3 {
+        font-size: 18px;
+        color: #eaeaea;
+    }
+    
+    .home-content p {
+        font-size: 10px;
+        max-width: 100%;
+        color: #cccbcb;
+        font-style: italic;
+    }
+    
+    .home-img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .home-img .rhomebus img {
+        left: -140px;
+        width: 500px;
+    }
+    .animate{
+        background-color: #1743e3;
+        height: 100%;
+    }
+    .home-content .btn{
+        background: #eaeaea;
+        border: 2px solid #eaeaea;
+        color: #1743e3;
+        padding: 5px 14px ;
+        font-size: 14px;
+    }
+    .home-content .btn:hover{
+        background: #1743e3;
+        border: 2px solid #eaeaea;
+        color: #eaeaea;
+    }
+    .rhomebus2 {
+        position: absolute;
+        top: -25%;
+        right: -25%;
+        width: 600px;
+        height: 650px;
+        background-color: #1743e3;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .home-img .rhomebus{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #eaeaea;
+        border:25px solid #1743e3 ;
+        box-shadow: -14px 14px 14px rgb(0,0,0,.2);
+    }
+    .home-img{
+        position: relative;
+        right: -7%;
+        width: 390px;
+        height: 390px;
+        transform: rotate(45deg);
+       
+    }
+    .home-img .rhomebus{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #eaeaea;
+        border:25px solid #1743e3 ;
+        box-shadow: -14px 14px 14px rgb(0,0,0,.2);
+    }
+    .home-img .rhomebus img{
+        position: absolute;
+        top: 70px;
+        left: -60px;
+        width: 420px;
+        max-width: 750px;
+        transform: rotate(-45deg);
+        transition: 1s;
+        animation: Zome 1s;
     }
 }
